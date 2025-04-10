@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Transport Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        label {
+            display: inline-block;
+            width: 250px;
+            margin: 5px 0;
+        }
+        input[type="text"], textarea {
+            width: 300px;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        textarea {
+            height: 60px;
+            vertical-align: top;
+        }
+        .checkbox-group {
+            margin: 5px 0;
+        }
+        button {
+            display: block;
+            width: 150px;
+            padding: 10px;
+            margin: 20px auto;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animal Transport Checklist</h1>
+    <p><strong>Instructions:</strong> Please fill out this checklist with details about your animal for safe transportation.</p>
+
+    <div class="section">
+        <h2>1. Basic Animal Information</h2>
+        <label>Species/Type of Animal:</label><input type="text" name="species"><br>
+        <label>Breed (if applicable):</label><input type="text" name="breed"><br>
+        <label>Name:</label><input type="text" name="name"><br>
+        <label>Age:</label><input type="text" name="age"><br>
+        <label>Weight:</label><input type="text" name="weight"><br>
+        <label>Sex:</label>
+        <div class="checkbox-group">
+            <input type="checkbox" name="sex" value="male"> Male
+            <input type="checkbox" name="sex" value="female"> Female
+            <input type="checkbox" name="sex" value="unknown"> Unknown
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Health and Safety</h2>
+        <label>Is the animal vaccinated?</label>
+        <input type="checkbox" name="vaccinated" value="yes"> Yes
+        <input type="checkbox" name="vaccinated" value="no"> No<br>
+        <label>If yes, list vaccinations:</label><input type="text" name="vaccinations"><br>
+        <label>Any health conditions/medications?</label>
+        <input type="checkbox" name="health" value="yes"> Yes
+        <input type="checkbox" name="health" value="no"> No<br>
+        <label>If yes, describe:</label><textarea name="health_desc"></textarea><br>
+        <label>Medications during transport:</label><input type="text" name="medications"><br>
+        <label>Prone to motion sickness?</label>
+        <input type="checkbox" name="motion" value="yes"> Yes
+        <input type="checkbox" name="motion" value="no"> No<br>
+        <label>If yes, remedies provided:</label><input type="text" name="remedies"><br>
+        <label>Does animal bite/scratch?</label>
+        <input type="checkbox" name="aggressive" value="yes"> Yes
+        <input type="checkbox" name="aggressive" value="no"> No<br>
+        <label>If yes, handling precautions:</label><input type="text" name="precautions">
+    </div>
+
+    <div class="section">
+        <h2>3. Containment Details</h2>
+        <label>Type of carrier/crate:</label><input type="text" name="carrier_type"><br>
+        <label>Size of carrier:</label><input type="text" name="carrier_size"><br>
+        <label>Carrier secure/escape-proof?</label>
+        <input type="checkbox" name="secure" value="yes"> Yes
+        <input type="checkbox" name="secure" value="no"> No<br>
+        <label>Bedding/comfort items:</label><input type="text" name="bedding"><br>
+        <label>Carrier labeled?</label>
+        <input type="checkbox" name="labeled" value="yes"> Yes
+        <input type="checkbox" name="labeled" value="no"> No<br>
+        <label>If yes, what’s written:</label><input type="text" name="label_text">
+    </div>
+
+    <div class="section">
+        <h2>4. Feeding and Hydration</h2>
+        <label>Last time fed:</label><input type="text" name="last_fed"><br>
+        <label>Food provided?</label>
+        <input type="checkbox" name="food" value="yes"> Yes
+        <input type="checkbox" name="food" value="no"> No<br>
+        <label>If yes, type/amount:</label><input type="text" name="food_details"><br>
+        <label>Feeding instructions:</label><input type="text" name="feeding_instructions"><br>
+        <label>Water provided?</label>
+        <input type="checkbox" name="water" value="yes"> Yes
+        <input type="checkbox" name="water" value="no"> No<br>
+        <label>If yes, how supplied:</label><input type="text" name="water_details"><br>
+        <label>Special hydration needs:</label><input type="text" name="hydration_needs">
+    </div>
+
+    <div class="section">
+        <h2>5. Temperature and Environment Needs</h2>
+        <label>Ideal temperature range:</label><input type="text" name="temp_range"><br>
+        <label>Sensitive to heat/cold?</label>
+        <input type="checkbox" name="temp_sensitive" value="yes"> Yes
+        <input type="checkbox" name="temp_sensitive" value="no"> No<br>
+        <label>If yes, explain:</label><input type="text" name="temp_explain"><br>
+        <label>Ventilation requirements:</label><input type="text" name="ventilation"><br>
+        <label>Noise sensitivity?</label>
+        <input type="checkbox" name="noise" value="yes"> Yes
+        <input type="checkbox" name="noise" value="no"> No<br>
+        <label>If yes, suggestions:</label><input type="text" name="noise_suggestions">
+    </div>
+
+    <div class="section">
+        <h2>6. Destination and Emergency Contact</h2>
+        <label>Drop-off location:</label><input type="text" name="dropoff"><br>
+        <label>Expected travel time:</label><input type="text" name="travel_time"><br>
+        <label>Customer name:</label><input type="text" name="customer_name"><br>
+        <label>Customer phone:</label><input type="text" name="customer_phone"><br>
+        <label>Emergency contact:</label><input type="text" name="emergency_name"><br>
+        <label>Emergency phone:</label><input type="text" name="emergency_phone"><br>
+        <label>Veterinarian contact:</label><input type="text" name="vet_name"><br>
+        <label>Vet phone:</label><input type="text" name="vet_phone">
+    </div>
+
+    <div class="section">
+        <h2>7. Additional Notes</h2>
+        <label>Specific behaviors/quirks:</label><textarea name="behaviors"></textarea><br>
+        <label>Other instructions:</label><textarea name="other_instructions"></textarea>
+    </div>
+
+    <div class="section">
+        <label>Customer Signature:</label><input type="text" name="signature"><br>
+        <label>Date:</label><input type="text" name="date">
+    </div>
+
+    <button onclick="window.print()">Print Checklist</button>
+</body>
+</html>
